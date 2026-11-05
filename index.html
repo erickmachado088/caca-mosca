@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Caça-moscas</title>
+        <Script>
+            function iniciarJogo(){
+                var nivel = document.getElementById("nivel").value
+                if(nivel===""){
+                    alert("Selecione um nivel para jogar!")
+                    return false
+                }
+                window.location.href = "app.html?"+nivel
+            }
+        </Script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <img src="imagens/game.png">   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <select class="form-control" id="nivel">
+                            <option value="">...Selecione o nivel</option>
+                            <option value="normal">Normal</option>
+                            <option value="dificil">Dificil</option>
+                            <option value="Chucknorris">Chucknorris</option>
+                        </select>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-center">
+                    <button
+                     type="button"
+                     class="btn btn-danger btn-lg" onclick="iniciarJogo()">Iniciar jogo</button>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
